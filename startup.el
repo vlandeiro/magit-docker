@@ -1,0 +1,8 @@
+(require 'package)
+(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
+(package-refresh-contents)
+(package-install 'magit nil)
+(package-install 'helm nil)
