@@ -40,9 +40,9 @@ function Run-Magit { docker run -it -v ${PWD}:/gitrepo vlandeiro/magit }
 Set-Alias -Name magit -Value Run-Magit
 ```
 
-### Linux
+### Mac OS / Linux
 
 ```sh
-alias magit="docker run -it -v $(pwd):/gitrepo -v $HOME/.gitconfig:/root/.gitconfig -v $HOME/.ssh:/root/.ssh vlandeiro/magit"
+function magit { docker run -it -v $(pwd):/gitrepo -v $HOME/.gitconfig:/root/.gitconfig -v $HOME/.ssh:/root/.ssh vlandeiro/magit:latest }
 ```
 
