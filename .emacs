@@ -4,7 +4,7 @@
    (require 'helm-config)
    (helm-mode 1)))
 
-(menu-bar-mode nil)
+(menu-bar-mode -1)
 
 (custom-set-faces
  ;; other faces
