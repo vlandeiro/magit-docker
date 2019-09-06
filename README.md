@@ -43,6 +43,6 @@ Set-Alias -Name magit -Value Run-Magit
 ### Linux
 
 ```sh
-alias magit="docker run -it -v $(pwd):/gitrepo -v $HOME/.gitconfig:/root/.gitconfig -v $HOME/.ssh:/root/.ssh fdfd490b966f"
+alias magit="docker run -it -v $(pwd):/gitrepo -v $HOME/.gitconfig:/root/.gitconfig -v $HOME/.ssh:/root/.ssh vlandeiro/magit"
 ```
 
