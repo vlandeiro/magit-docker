@@ -1,13 +1,13 @@
-# Magit on docker
+# Magit in Docker
 
 ## Description
 
 This docker image installs emacs, magit and helm. It then runs magit in
-`/girepo` in the container. In order to use it on a repository on your machine,
-you will need to mount a volume on the container using:
+`/gitrepo` in the container. In order to use it on a repository on your machine,
+you will need to mount a volume on the container using the `-v` option in docker run:
 
 ```sh
-docker run -v /path/to/your/repo:/gitrepo -it vlandeiro/magit`
+docker run -v /path/to/your/repo:/gitrepo -it vlandeiro/magit
 ```
 
 ### Why not install Emacs?
@@ -45,4 +45,3 @@ Set-Alias -Name magit -Value Run-Magit
 ```sh
 function magit { docker run -it -v $(pwd):/gitrepo -v $HOME/.gitconfig:/root/.gitconfig -v $HOME/.ssh:/root/.ssh vlandeiro/magit:latest }
 ```
-
